@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.lib.mocks;
+package org.firstinspires.ftc.teamcode.mocks;
 
 import com.qualcomm.robotcore.util.ElapsedTime;
 
