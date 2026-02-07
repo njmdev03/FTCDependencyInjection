@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Fake ElapsedTime for controlled testing
  */
-public class ElapsedTimeMock extends ElapsedTime {
+public class MockElapsedTime extends ElapsedTime {
     private long fakeTime;
 
     public void setTime(long value, TimeUnit unit) {

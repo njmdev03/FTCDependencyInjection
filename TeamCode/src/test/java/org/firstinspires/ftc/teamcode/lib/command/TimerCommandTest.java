@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode.lib.command;
 
-import org.firstinspires.ftc.teamcode.mocks.ElapsedTimeMock;
+import org.firstinspires.ftc.teamcode.mocks.MockElapsedTime;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TimerCommandTest {
     @Test
     void testNotCompletedBeforeTime() {
-        ElapsedTimeMock timer = new ElapsedTimeMock();
+        MockElapsedTime timer = new MockElapsedTime();
         TimerCommand command = new TimerCommand(timer, 1000, TimeUnit.MILLISECONDS);
 
         command.init();
@@ -22,7 +22,7 @@ class TimerCommandTest {
 
     @Test
     void testCompletedAtExactTime() {
-        ElapsedTimeMock timer = new ElapsedTimeMock();
+        MockElapsedTime timer = new MockElapsedTime();
         TimerCommand command = new TimerCommand(timer, 1000, TimeUnit.MILLISECONDS);
 
         command.init();
@@ -34,7 +34,7 @@ class TimerCommandTest {
 
     @Test
     void testCompletedAfterTime() {
-        ElapsedTimeMock timer = new ElapsedTimeMock();
+        MockElapsedTime timer = new MockElapsedTime();
         TimerCommand command = new TimerCommand(timer, 1000, TimeUnit.MILLISECONDS);
 
         command.init();
@@ -46,7 +46,7 @@ class TimerCommandTest {
 
     @Test
     void testResetIsCalledOnInit() {
-        ElapsedTimeMock timer = new ElapsedTimeMock();
+        MockElapsedTime timer = new MockElapsedTime();
         timer.setTime(5000, TimeUnit.MILLISECONDS);
 
         TimerCommand command = new TimerCommand(timer, 1000, TimeUnit.MILLISECONDS);
@@ -59,7 +59,7 @@ class TimerCommandTest {
 
     @Test
     void testDifferentTimeUnits() {
-        ElapsedTimeMock timer = new ElapsedTimeMock();
+        MockElapsedTime timer = new MockElapsedTime();
         TimerCommand command = new TimerCommand(timer, 2, TimeUnit.SECONDS);
 
         command.init();

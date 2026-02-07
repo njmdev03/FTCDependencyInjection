@@ -21,8 +21,12 @@ public class Menu {
     private boolean lock2 = false;
 
     public Menu() {
-        firstTimer = new ElapsedTime();
-        loopTimer = new ElapsedTime();
+        this(new ElapsedTime(), new ElapsedTime());
+    }
+
+    public Menu(ElapsedTime firstTimer, ElapsedTime loopTimer) {
+        this.firstTimer = firstTimer;
+        this.loopTimer = loopTimer;
         firstTimer.startTime();
         loopTimer.startTime();
     }
