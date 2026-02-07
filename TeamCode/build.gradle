@@ -25,4 +25,5 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
+    testImplementation "org.junit.jupiter:junit-jupiter:6.0.2"
 }
